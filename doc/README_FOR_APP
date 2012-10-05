@@ -1,0 +1,5 @@
+This README file will be used to introduce the application and point to useful
+places in the API for learning more.
+
+Run "rake doc:app" to generate API documentation for models, controllers,
+helpers, and libraries.

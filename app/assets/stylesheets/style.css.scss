@@ -1,0 +1,54 @@
+@import "bootstrap";
+
+$grayMediumLight: #EAEAEA;
+
+/** Universal **/
+
+body {
+  // Make room for the nav bar:
+  padding-top: 60px;
+}
+
+/** Typography **/
+
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/** Footer **/
+
+footer {
+  margin-top: 45px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  font-size: 85%;
+
+  a {
+    color: $gray;
+
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+
+  .left {
+    float: left;
+  }
+  .right {
+    float: right;
+  }
+}
+
+// Responsive must be imported at the bottom so that it can see the current
+// CSS and override some elements when it kicks in.
+@import "bootstrap-responsive";
