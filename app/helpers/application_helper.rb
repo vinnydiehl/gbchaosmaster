@@ -12,12 +12,13 @@ module ApplicationHelper
   # will have the <tt>active</tt> class if the current location is +path+.
   #
   #   # If the current page is the root of the website:
-  #   nav_link "Home", root_path  # => '<li class="active">Home</li>'
+  #   nav_link "Home", root_path
+  #     # => '<li class="active"><a href="/">Home</a></li>'
   #
   #   # If the current page is not the root of the website:
-  #   nav_link "Home", root_path  # => "<li>Home</li>"
+  #   nav_link "Home", root_path  # => '<li><a href="/">Home</a></li>'
   def nav_link(text, path)
-    class_text = current_page?(path) ? "active" : ""
-    content_tag(:li, :class => class_text) { link_to text, path }
+    attrs = current_page?(path) ? { :class => "active" } : {}
+    content_tag(:li, attrs) { link_to text, path }
   end
 end
