@@ -2,8 +2,10 @@ source :rubygems
 
 gem "rails", "~> 3.2"
 
+# Use Thin as the web server.
 gem "thin", "~> 1.5"
 
+# jQuery JS Library
 gem "jquery-rails", "~> 2.1"
 
 group :assets do
@@ -17,12 +19,10 @@ end
 
 group :development, :test do
   gem "sqlite3", "~> 1.3"
-  gem "rspec-rails", "~> 2.11"
-  gem "fuubar", "~> 1.1"
-end
 
-group :test do
+  gem "rspec-rails", "~> 2.11"
   gem "capybara", "~> 1.1"
+  gem "fuubar", "~> 1.1"
 end
 
 group :production do
