@@ -1,10 +1,17 @@
-<footer class="footer">
-  <div class="left">
-    Source code available on
-    <%= link_to "GitHub", "https://github.com/gbchaosmaster/gbchaosmaster" %>.
+<div class="footer container">
+  <div class="row-fluid">
+    <div class="span4">
+      <div class="left">
+        Source code available on
+        <%= link_to "GitHub",
+                    "https://github.com/gbchaosmaster/gbchaosmaster" %>.
+      </div>
+    </div>
+    <div class="span4">Copyright ©2012 Vinny Diehl</div>
+    <div class="span4">
+      <div class="right">
+        <%= link_to "Contact the Developer", contact_path %>
+      </div>
+    </div>
   </div>
-  Copyright ©2012 Vinny Diehl
-  <div class="right">
-    <%= link_to "Contact the Developer", contact_path %>
-  </div>
-</footer>
+</div>
