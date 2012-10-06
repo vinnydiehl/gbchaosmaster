@@ -11,13 +11,15 @@
     <!-- Responsive page width on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <%= render "layouts/shim" %>
+    <%= render "layouts/application/shim" %>
   </head>
   <body>
-    <%= render "layouts/nav" %>
-    <div class="container">
-      <%= yield %>
-      <%= render "layouts/footer" %>
+    <%= render "layouts/application/nav" %>
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <%= content_for?(:content) ? yield(:content) : yield %>
+      </div>
+      <%= render "layouts/application/footer" %>
     </div>
   </body>
 </html>
