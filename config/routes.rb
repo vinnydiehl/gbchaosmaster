@@ -5,6 +5,6 @@ Gbchaosmaster::Application.routes.draw do
   match "/contact", to: "pages#contact"
 
   match "/projects", to: "projects#index"
-  match "/projects/ndstoolkit", to: "projects#nds_toolkit"
+  match "/projects/nds_toolkit", to: "projects#nds_toolkit"
   match "/projects/nutella", to: "projects#nutella"
 end
