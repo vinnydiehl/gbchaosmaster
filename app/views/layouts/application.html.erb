@@ -20,9 +20,12 @@
     <%= render "layouts/application/nav" %>
     <div class="container-fluid">
       <div class="row-fluid">
+        <%# The main yielded content is rendered here. %>
         <%= content_for?(:content) ? yield(:content) : yield %>
       </div>
-      <%= render "layouts/application/footer" %>
+      <div class="row-fluid">
+        <%= render "layouts/application/footer" %>
+      </div>
     </div>
   </body>
 </html>
