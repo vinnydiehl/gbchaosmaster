@@ -1,0 +1,52 @@
+//= require_self
+//= require resources/navbar
+
+@import "bootstrap";
+
+$grayMediumLight: #EAEAEA;
+
+body {
+  // Make room for the navigation bar:
+  padding-top: 60px;
+}
+
+/** Typography **/
+
+h1 {
+  font-size: 3em;
+  line-height: 1;
+  letter-spacing: -2px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+p {
+  font-size: 1.1em;
+  line-height: 1.7em;
+}
+
+/** Footer **/
+
+.footer {
+  margin-top: 10px;
+  padding-top: 5px;
+  border-top: 1px solid $grayMediumLight;
+  color: $grayLight;
+  font-size: 85%;
+
+  a {
+    color: $gray;
+
+    &:hover {
+      color: $grayDarker;
+    }
+  }
+
+  text-align: center;
+  .left {
+    text-align: left;
+  }
+  .right {
+    text-align: right;
+  }
+}

@@ -1,4 +1,13 @@
 module ApplicationHelper
+  # If there is a controller-specific stylesheet, return the link to that
+  # stylesheet. Otherwise, return <tt>nil</tt>.
+  def controller_specific_stylesheet
+    name = controller.controller_name
+    if Rails.application.assets.find_asset "#{name}.css"
+      stylesheet_link_tag name
+    end
+  end
+
   # Generates a generic page title. Prepend +title+ with "gbchaosmaster" and a
   # pipe for separation. If +title+ is blank, simply return "gbchaosmaster".
   #

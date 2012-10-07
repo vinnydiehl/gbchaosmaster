@@ -1,0 +1,8 @@
+// Gets rid of the out-of-place white triangle that showed up on mobile devices
+// on the navigation bar dropdown.
+@media (max-width: 979px) {
+  .nav-collapse .dropdown-menu:before,
+  .nav-collapse .dropdown-menu:after {
+    display: none !important;
+  }
+}

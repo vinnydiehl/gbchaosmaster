@@ -1,0 +1,6 @@
+//= require common
+//= require_self
+
+// Bootstrap Responsive must be last, so import it in this file and use
+// Sprockets's require_self tag.
+@import "bootstrap-responsive";
