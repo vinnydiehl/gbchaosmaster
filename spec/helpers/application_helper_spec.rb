@@ -7,7 +7,8 @@ describe ApplicationHelper do
       before { controller.stub!(:controller_name).and_return name }
 
       it "returns the link to the stylesheet" do
-        controller_specific_stylesheet.should == stylesheet_link_tag(name)
+        controller_specific_stylesheet.should ==
+          stylesheet_link_tag(name, media: "all")
       end
     end
 

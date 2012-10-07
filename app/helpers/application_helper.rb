@@ -4,7 +4,7 @@ module ApplicationHelper
   def controller_specific_stylesheet
     name = controller.controller_name
     if Rails.application.assets.find_asset "#{name}.css"
-      stylesheet_link_tag name
+      stylesheet_link_tag name, media: "all"
     end
   end
 
