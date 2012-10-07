@@ -2,6 +2,9 @@ source :rubygems
 
 gem "rails", "~> 3.2"
 
+# Use HAML as the templating framework.
+gem "haml-rails", "~> 0.3"
+
 # Use Thin as the web server.
 gem "thin", "~> 1.5"
 

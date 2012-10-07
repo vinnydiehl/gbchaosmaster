@@ -1,0 +1,7 @@
+- content_for :content do
+  .span3
+    = render "layouts/projects/sidebar"
+  .span9
+    = yield
+
+= render file: "layouts/application"

@@ -1,0 +1,37 @@
+.navbar.navbar-inverse.navbar-fixed-top
+  .navbar-inner
+    .container-fluid
+
+      -# This is the navigation toggle button- it only shows when the nav bar
+      -# is in collapse mode.
+      %a.btn.btn-navbar{"data-toggle" => "collapse",
+                        "data-target" => ".nav-collapse"}
+        - 3.times do
+          %span.icon-bar
+
+      = link_to "gbchaosmaster", root_path, class: "brand"
+
+      .nav-collapse.collapse
+        %ul.nav.pull-right
+          = nav_link "Home", root_path
+
+          -# Projects Dropdown
+          %li.dropdown
+            %a.dropdown-toggle{href: "#", "data-toggle" => "dropdown"}
+              Projects
+              %b.caret
+            %ul.dropdown-menu
+              = nav_link "Projects Home", projects_path
+
+              %li.divider
+
+              %li.nav-header Applications
+              = nav_link "NDS Toolkit", projects_ndstoolkit_path
+
+              %li.divider
+
+              %li.nav-header Libraries
+              = nav_link "Nutella", projects_nutella_path
+          -# End Projects Dropdown
+
+          = nav_link "About", about_path
