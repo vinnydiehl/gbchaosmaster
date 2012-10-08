@@ -6,3 +6,21 @@
     display: none !important;
   }
 }
+
+$brandShadow: rgba(255, 255, 255, 0.125);
+$brandHoverShadow: rgba(255, 255, 255, 0.4);
+
+$brandTransitionAll: 0.2s;
+$brandTransitionLinear: 0s;
+
+.navbar .brand {
+  -moz-transition: all $brandTransitionAll linear $brandTransitionLinear;
+  -webkit-transition: all $brandTransitionAll linear $brandTransitionLinear;
+  -o-transition: all $brandTransitionAll linear $brandTransitionLinear;
+
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px $brandShadow;
+
+  &:hover {
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.1), 0 0 30px $brandHoverShadow;
+  }
+}
