@@ -41,18 +41,42 @@ describe ApplicationHelper do
     context "when on the requested page" do
       before { stub!(:current_page?).and_return true }
 
-      it "returns an active element" do
-        nav_link("Home", root_path).should ==
-          "<li class=\"active\"><a href=\"#{root_path}\">Home</a></li>"
+      context "with one path as a parameter" do
+        it "returns an active element" do
+          nav_link("Home", root_path).should ==
+            "<li class=\"active\"><a href=\"#{root_path}\">Home</a></li>"
+        end
+      end
+
+      context "with multiple paths as parameters" do
+        it "returns an active element with the first path as the href" do
+          nav_link("Test", root_path, about_path).should ==
+            "<li class=\"active\"><a href=\"#{root_path}\">Test</a></li>"
+
+          nav_link("Test", about_path, root_path).should ==
+            "<li class=\"active\"><a href=\"#{about_path}\">Test</a></li>"
+        end
       end
     end
 
     context "when not on the requested page" do
       before { stub!(:current_page?).and_return false }
 
-      it "returns an inactive element" do
-        nav_link("Home", root_path).should ==
-          "<li><a href=\"#{root_path}\">Home</a></li>"
+      context "with one path as a parameter" do
+        it "returns an inactive element" do
+          nav_link("Home", root_path).should ==
+            "<li><a href=\"#{root_path}\">Home</a></li>"
+        end
+      end
+
+      context "with multiple paths as parameters" do
+        it "returns an inactive element with the first path as the href" do
+          nav_link("Test", root_path, about_path).should ==
+            "<li><a href=\"#{root_path}\">Test</a></li>"
+
+          nav_link("Test", about_path, root_path).should ==
+            "<li><a href=\"#{about_path}\">Test</a></li>"
+        end
       end
     end
   end
