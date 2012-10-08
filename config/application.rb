@@ -48,5 +48,9 @@ module Gbchaosmaster
 
     # Version of your assets, change this if you want to expire all your assets
     config.assets.version = "1.0"
+
+    # All assets that aren't included in a manifest still need to be
+    # precompiled.
+    config.assets.precompile << "projects.css"
   end
 end
